@@ -38,7 +38,8 @@ def compute_average(imlist):
         try:
             averageim += array(Image.open(imname))
         except:
-            print(imname + '...skipped')
+            pass
+            # print(imname + '...skipped', Image.open(imname).size)
     averageim /= len(imlist)
 
     return array(averageim, 'uint8')
